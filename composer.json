@@ -1,0 +1,27 @@
+{
+    "name": "pnoexz/quality-tools",
+    "description": "PHP Quality Tools",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Matias Pino",
+            "email": "pnoexz@gmail.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phpstan/phpstan": "^0.12.11",
+        "vimeo/psalm": "^3.9",
+        "phploc/phploc": "^5.0",
+        "nunomaduro/phpinsights": "dev-feat/summary-only"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Pnoexz/phpinsights"
+        }
+    ]
+}

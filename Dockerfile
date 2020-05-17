@@ -1,5 +1,5 @@
 ###########################
-FROM php:7.4-alpine AS base
+FROM php:7.2-alpine AS base
 ###########################
 WORKDIR /tmp
 
@@ -12,7 +12,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /tmp
 
 RUN composer require --no-progress --no-scripts --no-plugins --no-interaction \
-    php "7.4.*" \
+    php "7.2.*" \
     overtrue/phplint \
     squizlabs/php_codesniffer \
     phpstan/phpstan \

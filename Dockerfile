@@ -28,4 +28,4 @@ COPY --from=dependencies /tmp/vendor /composer/vendor
 ENV PATH="/composer/vendor/bin:${PATH}"
 
 WORKDIR /app
-ENTRYPOINT ["/bin/ash"]
+ENTRYPOINT ["/bin/sh", "-c"]

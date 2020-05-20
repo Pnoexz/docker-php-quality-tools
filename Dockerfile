@@ -19,7 +19,8 @@ RUN composer require --no-progress --no-scripts --no-plugins --no-interaction \
     vimeo/psalm \
     phploc/phploc \
     nunomaduro/phpinsights \
-    slevomat/coding-standard
+    slevomat/coding-standard \
+    phpcompatibility/php-compatibility
 
 ##################
 FROM base AS final

@@ -28,5 +28,7 @@ FROM base AS final
 COPY --from=dependencies /tmp/vendor /composer/vendor
 ENV PATH="/composer/vendor/bin:${PATH}"
 
+RUN /composer/vendor/bin/phpcs --config-set installed_paths /composer/vendor/phpcompatibility/php-compatibility
+
 WORKDIR /app
 ENTRYPOINT ["/bin/sh", "-c"]

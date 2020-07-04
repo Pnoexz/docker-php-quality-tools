@@ -30,5 +30,7 @@ ENV PATH="/composer/vendor/bin:${PATH}"
 
 RUN /composer/vendor/bin/phpcs --config-set installed_paths /composer/vendor/phpcompatibility/php-compatibility
 
+RUN sed 's/memory_limit = 128M/memory_limit = -1/' -i /usr/local/etc/php/php.ini-development
+RUN cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
+
 WORKDIR /app
-ENTRYPOINT ["/bin/sh", "-c"]
